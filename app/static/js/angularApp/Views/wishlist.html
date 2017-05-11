@@ -1,0 +1,22 @@
+<a href="/#/logout">Logout</a>
+
+	<div>
+		<h1> Wishlist</h1>
+		<button class="btn-xs" ng-click="share()">Share</button>
+	</div>
+
+
+	<div ng-repeat="item in wishlist">
+		<div class="col-md-4">
+			<h3>{{item.title}}</h3>
+			{{item.description}}
+			<img class="thumbnail" height="200" ng-src ="{{item.thumbnail_url}}"></img>
+			<button class="btn-xs" ng-click="deleteItem($index)">Remove</button>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<button class = "btn btn-default;align:center" ng-click="addNew()">+</button>
+	</div>
+
+
